@@ -1,0 +1,153 @@
+.section {
+  background-color: var(--color-primary);
+  padding: 6rem 2rem 2rem;
+  color: var(--color-white);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.headline {
+  font-family: var(--font-ubuntu);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+}
+
+.text {
+  font-family: var(--font-inter);
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: var(--color-white);
+  margin-bottom: 3rem;
+  opacity: 0.95;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.formGroup {
+  width: 100%;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius);
+  border: none;
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  font-size: 1rem;
+  font-family: var(--font-inter);
+  font-weight: 300;
+  transition: box-shadow 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(136, 163, 140, 0.3);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitButton {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  padding: 1.25rem 2.5rem;
+  border-radius: var(--radius);
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.submitButton:hover {
+  background-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 2rem;
+  margin-top: 4rem;
+}
+
+.footerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footerLogo {
+  font-family: var(--font-ubuntu);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-white);
+}
+
+.footerNav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footerNav a {
+  font-family: var(--font-inter);
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: var(--color-white);
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.footerNav a:hover {
+  opacity: 1;
+}
+
+.footerText {
+  font-family: var(--font-inter);
+  font-weight: 300;
+  font-size: 0.85rem;
+  color: var(--color-white);
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 1rem 1.5rem;
+  }
+
+  .text {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .form {
+    gap: 1.25rem;
+  }
+
+  .footerNav {
+    gap: 1rem;
+    font-size: 0.85rem;
+  }
+}
+
