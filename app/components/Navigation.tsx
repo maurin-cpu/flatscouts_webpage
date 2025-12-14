@@ -28,13 +28,13 @@ export default function Navigation() {
         <div className={styles.logo}>
           <Image 
             src="/logo.png" 
-            alt="FlatScouts Logo" 
+            alt="Flatscouts Logo" 
             width={40} 
             height={40}
             className={styles.logoImage}
             priority
           />
-          <span className={styles.logoText}>FlatScouts</span>
+          <span className={styles.logoText}>Flatscouts</span>
         </div>
         <div className={styles.links}>
           <a href="#team" onClick={(e) => { e.preventDefault(); scrollToSection('team') }}>Team</a>

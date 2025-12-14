@@ -1,4 +1,4 @@
-# FlatScouts Landingpage
+# Flatscouts Landingpage
 
 Moderne, minimalistische Landingpage für das KI-Tool im Immobilien-Dokumentenmanagement.
 
@@ -38,4 +38,5 @@ npm start
   - Accent: #e3c9a5
   - Background: #F6EDE3
 - **Stil**: Minimalistisch, viel Whitespace, 16px Border-Radius, mobil-first
+
 

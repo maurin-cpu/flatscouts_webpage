@@ -17,7 +17,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'FlatScouts - KI-Tool für Immobilien-Dokumentenmanagement',
+  title: 'Flatscouts - KI-Tool für Immobilien-Dokumentenmanagement',
   description: 'Dokumenten-Chaos beenden durch vollständige Automatisierung',
 }
 
@@ -32,4 +32,5 @@ export default function RootLayout({
     </html>
   )
 }
+
 

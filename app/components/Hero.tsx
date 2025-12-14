@@ -14,17 +14,21 @@ export default function Hero() {
     <section className={styles.hero} id="hero">
       <div className={styles.container}>
         <h1 className={styles.headline}>
-          Dokumenten-Chaos beenden – signifikant mehr Effizienz und Sicherheit.
+          Dokumenten-Chaos beenden.
         </h1>
         <p className={styles.subheadline}>
-          KI-Assistent, der PDFs, E-Mails und Scans automatisch erkennt, kategorisiert und sicher in Ihr DMS oder ERP integriert – manuelles Ablegen entfällt, Datenverluste werden verhindert.
+          KI-Assistent, der PDFs, E-Mails und Scans automatisch erkennt, kategorisiert und in Ihr DMS oder ERP integriert – Datensilos werden aufgelöst, manuelles Ablegen entfällt, Datenverluste werden verhindert.
         </p>
-        <button 
-          className={styles.ctaButton}
-          onClick={() => scrollToSection('cta')}
-        >
-          Kostenlose Demo anfordern
-        </button>
+        <div className={styles.ctaWrapper}>
+          <button 
+            className={styles.ctaButton}
+            onClick={() => scrollToSection('cta')}
+          >
+            Persönliches Gespräch vereinbaren
+          </button>
+          <p className={styles.subText}>
+          </p>
+        </div>
       </div>
     </section>
   )

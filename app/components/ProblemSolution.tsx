@@ -14,15 +14,15 @@ export default function ProblemSolution() {
             <ul className={styles.list}>
               <li className={styles.listItem}>
                 <span className={styles.icon}>•</span>
-                Informationen suchen in mehreren Systemen und E-Mails
+                Informationen suchen in mehreren Systemen und E-Mails (Datensilos)
               </li>
               <li className={styles.listItem}>
                 <span className={styles.icon}>•</span>
-                Datenverluste bei Mandatswechseln oder wenn Mitarbeiter gehen, ohne Daten abzulegen
+                Datenverluste bei Personalwechseln oder Mandatsübergaben
               </li>
               <li className={styles.listItem}>
                 <span className={styles.icon}>•</span>
-                Manuelles Ablegen und Indexieren – teuer und fehleranfällig
+                Manuelles Ablegen und Indexieren von E-Mails & Dokumenten
               </li>
               <li className={styles.listItem}>
                 <span className={styles.icon}>•</span>
@@ -36,7 +36,11 @@ export default function ProblemSolution() {
             <ul className={styles.list}>
               <li className={styles.listItem}>
                 <span className={styles.icon}>•</span>
-                Vollautomatische Erkennung & Kategorisierung
+                Vollautomatische Kategorisierung & Ablage von Dokumenten und E-Mails
+              </li>
+              <li className={styles.listItem}>
+                <span className={styles.icon}>•</span>
+                Schnelle Suche & ERP-Abgleich
               </li>
               <li className={styles.listItem}>
                 <span className={styles.icon}>•</span>
@@ -44,11 +48,7 @@ export default function ProblemSolution() {
               </li>
               <li className={styles.listItem}>
                 <span className={styles.icon}>•</span>
-                ERP-Abgleich & nahtloser Transfer
-              </li>
-              <li className={styles.listItem}>
-                <span className={styles.icon}>•</span>
-                Höchste Datensicherheit (Cloud oder on-premise)
+                Signifikanter Effizienzgewinn im Alltag
               </li>
             </ul>
           </div>

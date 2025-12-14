@@ -1,109 +1,194 @@
+'use client'
+
+import { useEffect, useRef } from 'react'
 import styles from './ProofProcess.module.css'
 
 export default function ProofProcess() {
+  const blocksRef = useRef<(HTMLDivElement | null)[]>([])
+  const containerRef = useRef<HTMLDivElement | null>(null)
+
+  useEffect(() => {
+    // Check for reduced motion preference
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const animatedBlocks = new Set<HTMLElement>()
+
+    const observers = blocksRef.current.map((block, index) => {
+      if (!block) return null
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const element = entry.target as HTMLElement
+            
+            if (entry.isIntersecting) {
+              // Only animate if not already animated
+              if (!animatedBlocks.has(element)) {
+                // Mark as animated so it doesn't animate again
+                animatedBlocks.add(element)
+                
+                // Staggered animation: each block appears with a delay
+                const delay = prefersReducedMotion ? 0 : index * 120 // 120ms stagger
+                
+                setTimeout(() => {
+                  element.classList.add(styles.visible)
+                }, delay)
+              } else {
+                // If already animated, just ensure it's visible (no animation)
+                element.classList.add(styles.visible)
+              }
+            }
+          })
+        },
+        {
+          threshold: 0.15,
+          rootMargin: '0px 0px -80px 0px',
+        }
+      )
+
+      observer.observe(block)
+      return observer
+    })
+
+    return () => {
+      observers.forEach((observer) => observer?.disconnect())
+    }
+  }, [])
+
   return (
     <section className={styles.section} id="proof-process">
-      <div className={styles.container}>
+      <div className={styles.container} ref={containerRef}>
         <h2 className={styles.headline}>
-          Herausforderungen & Nutzen
+          In 5 Schritten zu automatisierter Effizienz
         </h2>
+        <p className={styles.subtitle}>
+          Schritt 1 ist einmalig beim Onboarding – die Schritte 2-5 laufen kontinuierlich im Daily Business.
+        </p>
 
-        <div className={styles.challengesBenefits}>
-          <div className={styles.column}>
-            <h3 className={styles.columnTitle}>Herausforderungen</h3>
-            <ul className={styles.list}>
-              <li className={styles.listItem}>
-                <span className={styles.icon}>•</span>
-                Dokumente & Infos an 5 Orten suchen
-              </li>
-              <li className={styles.listItem}>
-                <span className={styles.icon}>•</span>
-                Datenverluste bei Wechseln/Personalfluktuation
-              </li>
-              <li className={styles.listItem}>
-                <span className={styles.icon}>•</span>
-                Manuelles Ablegen & Indexieren
-              </li>
-              <li className={styles.listItem}>
-                <span className={styles.icon}>•</span>
-                Fragmentierte Tools
-              </li>
-            </ul>
+        <div className={styles.zigzagContainer}>
+          {/* Block 1: Bild links, Text rechts - Struktur konfigurieren */}
+          <div
+            ref={(el) => { blocksRef.current[0] = el }}
+            className={`${styles.zigzagBlock} ${styles.block1}`}
+          >
+            <div className={styles.imageWrapper}>
+              <div className={styles.iconWrapper}>
+                <img src="/konfiguration.png" alt="Struktur konfigurieren" />
+              </div>
+            </div>
+            <div className={styles.textWrapper}>
+              <div className={styles.stepContent}>
+                <h3 className={styles.stepTitle}>
+                  <span className={styles.stepNumber}>1.</span>
+                  <span>Struktur konfigurieren</span>
+                  <span className={styles.stepBadge}>(einmalig)</span>
+                </h3>
+                <p className={styles.stepText}>
+                  Definieren Sie Ihre Indexierung, Kategorien und Ablagelogik – inklusive Konfidenz-Schwelle für automatischen Transfer. Passend zu Ihrem DMS/ERP.
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div className={styles.column}>
-            <h3 className={styles.columnTitle}>Nutzen</h3>
-            <ul className={styles.list}>
-              <li className={styles.listItem}>
-                <span className={styles.icon}>•</span>
-                Vollautomatische Ablage
-              </li>
-              <li className={styles.listItem}>
-                <span className={styles.icon}>•</span>
-                Keine Datenverluste
-              </li>
-              <li className={styles.listItem}>
-                <span className={styles.icon}>•</span>
-                Schnelle Suche & Abgleich
-              </li>
-              <li className={styles.listItem}>
-                <span className={styles.icon}>•</span>
-                Signifikanter Effizienzgewinn
-              </li>
-            </ul>
+          {/* Block 2: Text links, Bild rechts - Dokumente hochladen */}
+          <div
+            ref={(el) => { blocksRef.current[1] = el }}
+            className={`${styles.zigzagBlock} ${styles.block2}`}
+          >
+            <div className={styles.textWrapper}>
+              <div className={styles.stepContent}>
+                <h3 className={styles.stepTitle}>
+                  <span className={styles.stepNumber}>2.</span>
+                  <span>Dokumente hochladen</span>
+                  <span className={styles.stepBadge}>(kontinuierlich)</span>
+                </h3>
+                <p className={styles.stepText}>
+                  Laden Sie laufend E-Mails, PDFs und Scans hoch – alles wird zentral und sicher verarbeitet.
+                </p>
+              </div>
+            </div>
+            <div className={styles.imageWrapper}>
+              <div className={styles.iconWrapper}>
+                <img src="/upload.png" alt="Dokumente hochladen" />
+              </div>
+            </div>
+          </div>
+
+          {/* Block 3: Bild links, Text rechts - AI-Kategorisierung */}
+          <div
+            ref={(el) => { blocksRef.current[2] = el }}
+            className={`${styles.zigzagBlock} ${styles.block3}`}
+          >
+            <div className={styles.imageWrapper}>
+              <div className={styles.iconWrapper}>
+                <img src="/ai-kategorisierung.png" alt="AI-Kategorisierung" />
+              </div>
+            </div>
+            <div className={styles.textWrapper}>
+              <div className={styles.stepContent}>
+                <h3 className={styles.stepTitle}>
+                  <span className={styles.stepNumber}>3.</span>
+                  <span>AI-Kategorisierung</span>
+                  <span className={styles.stepBadge}>(kontinuierlich)</span>
+                </h3>
+                <p className={styles.stepText}>
+                  Die KI erkennt Inhalte automatisch und schlägt Kategorien/Benennungen vor – mit Konfidenz-Wert für jede Entscheidung.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Block 4: Text links, Bild rechts - Intelligenter Transfer */}
+          <div
+            ref={(el) => { blocksRef.current[3] = el }}
+            className={`${styles.zigzagBlock} ${styles.block4}`}
+          >
+            <div className={styles.textWrapper}>
+              <div className={styles.stepContent}>
+                <h3 className={styles.stepTitle}>
+                  <span className={styles.stepNumber}>4.</span>
+                  <span>Intelligenter Transfer</span>
+                  <span className={styles.stepBadge}>(kontinuierlich)</span>
+                </h3>
+                <p className={styles.stepText}>
+                  Dokumente mit hoher Konfidenz (Ihre definierte Schwelle) werden direkt übertragen – ohne Validierung. Bei niedriger Konfidenz validieren Sie kurz; das Tool lernt dazu.
+                </p>
+              </div>
+            </div>
+            <div className={styles.imageWrapper}>
+              <div className={styles.iconWrapper}>
+                <img src="/validierung.png" alt="Intelligenter Transfer" />
+              </div>
+            </div>
+          </div>
+
+          {/* Block 5: Bild links, Text rechts - Nahtloser Abgleich */}
+          <div
+            ref={(el) => { blocksRef.current[4] = el }}
+            className={`${styles.zigzagBlock} ${styles.block5}`}
+          >
+            <div className={styles.imageWrapper}>
+              <div className={styles.iconWrapper}>
+                <img src="/ablage.png" alt="Nahtloser Abgleich" />
+              </div>
+            </div>
+            <div className={styles.textWrapper}>
+              <div className={styles.stepContent}>
+                <h3 className={styles.stepTitle}>
+                  <span className={styles.stepNumber}>5.</span>
+                  <span>Nahtloser Abgleich – erledigt</span>
+                  <span className={styles.stepBadge}>(kontinuierlich)</span>
+                </h3>
+                <p className={styles.stepText}>
+                  Alles landet sicher in ERP, Filesystem und DMS – inklusive Aktualisierungen. Maximale Automatisierung bei voller Kontrolle.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
         <p className={styles.closingLine}>
-          Basierend auf realen Branchengesprächen – für Ihren Alltag.
+          Basierend auf Interviews mit Branchenexperten – maximale Entlastung im Daily Business und bei Mandatswechseln.
         </p>
-
-        <h3 className={styles.processSubtitle}>
-          In 3 einfachen Schritten umsetzbar
-        </h3>
-
-        <div className={styles.process}>
-          <div className={styles.step}>
-            <div className={styles.stepIcon}>1</div>
-            <h4 className={styles.stepTitle}>Dokumente hochladen</h4>
-            <div className={styles.stepIconSvg}>
-              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="15" y="20" width="30" height="35" rx="2" stroke="#123c36" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M20 25h20M20 30h20M20 35h15" stroke="#123c36" strokeWidth="2.5" strokeLinecap="round"/>
-                <path d="M30 12v8M30 12l-4 4M30 12l4 4" stroke="#123c36" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-          </div>
-          <div className={styles.arrow}>
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 10l10 10-10 10" stroke="#123c36" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
-          <div className={styles.step}>
-            <div className={styles.stepIcon}>2</div>
-            <h4 className={styles.stepTitle}>KI schlägt vor – kurze Validierung</h4>
-            <div className={styles.stepIconSvg}>
-              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="30" cy="30" r="15" stroke="#123c36" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M24 30l4 4 8-8" stroke="#123c36" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-          </div>
-          <div className={styles.arrow}>
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 10l10 10-10 10" stroke="#123c36" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
-          <div className={styles.step}>
-            <div className={styles.stepIcon}>3</div>
-            <h4 className={styles.stepTitle}>Automatischer Transfer – erledigt</h4>
-            <div className={styles.stepIconSvg}>
-              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 30h24M18 30l6 6M18 30l6-6M42 30l-6 6M42 30l-6-6" stroke="#123c36" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   )

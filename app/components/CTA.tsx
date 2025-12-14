@@ -28,9 +28,9 @@ export default function CTA() {
   return (
     <section className={styles.section} id="cta">
       <div className={styles.container}>
-        <h2 className={styles.headline}>Jetzt risikofrei starten</h2>
+        <h2 className={styles.headline}>Lassen Sie uns Ihre Anforderungen besprechen</h2>
         <p className={styles.text}>
-          Volumenbasiertes Pricing oder Abo – inklusive kostenlosem Pilot.
+          Produkt in Entwicklung – wir möchten Ihre Bedürfnisse verstehen und Ihnen priorisierten Zugang ermöglichen.
         </p>
 
         <form className={styles.form} onSubmit={handleSubmit}>
@@ -70,7 +70,7 @@ export default function CTA() {
           <div className={styles.formGroup}>
             <textarea
               name="message"
-              placeholder="Nachricht"
+              placeholder="Beschreiben Sie Ihre Anforderungen und wie wir Ihnen helfen können..."
               value={formData.message}
               onChange={handleChange}
               rows={4}
@@ -78,14 +78,14 @@ export default function CTA() {
             />
           </div>
           <button type="submit" className={styles.submitButton}>
-            Individuelles Angebot anfordern
+            Persönliches Gespräch vereinbaren
           </button>
         </form>
       </div>
 
       <footer className={styles.footer}>
         <div className={styles.footerContainer}>
-          <div className={styles.footerLogo}>FlatScouts</div>
+          <div className={styles.footerLogo}>Flatscouts</div>
           <nav className={styles.footerNav}>
             <a href="#hero">Home</a>
             <a href="#team">Team</a>
@@ -99,4 +99,5 @@ export default function CTA() {
     </section>
   )
 }
+
 
