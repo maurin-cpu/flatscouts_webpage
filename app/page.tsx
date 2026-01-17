@@ -1,8 +1,9 @@
 import Navigation from './components/Navigation'
 import Hero from './components/Hero'
-import ProblemSolution from './components/ProblemSolution'
+import Process from './components/Process'
 import ProofProcess from './components/ProofProcess'
-import Team from './components/Team'
+import ServiceModels from './components/ServiceModels'
+import FAQ from './components/FAQ'
 import CTA from './components/CTA'
 
 export default function Home() {
@@ -10,9 +11,10 @@ export default function Home() {
     <main>
       <Navigation />
       <Hero />
-      <ProblemSolution />
+      <Process />
       <ProofProcess />
-      <Team />
+      <ServiceModels />
+      <FAQ />
       <CTA />
     </main>
   )

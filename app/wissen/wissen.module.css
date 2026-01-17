@@ -1,0 +1,191 @@
+.main {
+  min-height: 100vh;
+  background-color: var(--color-background);
+  padding: 2rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.backLink {
+  display: inline-block;
+  font-family: var(--font-inter);
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: var(--color-secondary);
+  margin-bottom: 2rem;
+  transition: color 0.3s ease;
+}
+
+.backLink:hover {
+  color: var(--color-primary);
+}
+
+.headline {
+  font-family: var(--font-ubuntu);
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.intro {
+  font-family: var(--font-inter);
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: var(--color-secondary);
+  margin-bottom: 3rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Resource Grid */
+.resourceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.resourceCard {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(18, 60, 54, 0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.resourceCard:hover {
+  box-shadow: 0 8px 24px rgba(18, 60, 54, 0.12);
+  transform: translateY(-4px);
+}
+
+.resourceCard.comingSoon {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.resourceCard.comingSoon:hover {
+  transform: none;
+  box-shadow: 0 2px 8px rgba(18, 60, 54, 0.08);
+}
+
+.cardIcon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardTitle {
+  font-family: var(--font-ubuntu);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+  font-family: var(--font-inter);
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: var(--color-secondary);
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.cardLink {
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  transition: color 0.2s ease;
+}
+
+.resourceCard:hover .cardLink {
+  color: var(--color-secondary);
+}
+
+.badge {
+  display: inline-block;
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--color-secondary);
+  background: var(--color-background);
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 3rem;
+  background: var(--color-primary);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.ctaHeadline {
+  font-family: var(--font-ubuntu);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-white);
+  margin-bottom: 0.75rem;
+}
+
+.ctaText {
+  font-family: var(--font-inter);
+  font-weight: 300;
+  font-size: 1rem;
+  color: var(--color-white);
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.ctaButton {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius);
+  font-family: var(--font-ubuntu);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 1rem 0;
+  }
+
+  .resourceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .resourceCard {
+    padding: 1.5rem;
+  }
+
+  .ctaSection {
+    padding: 2rem 1.5rem;
+  }
+}

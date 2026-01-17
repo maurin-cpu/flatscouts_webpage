@@ -85,15 +85,53 @@ export default function CTA() {
 
       <footer className={styles.footer}>
         <div className={styles.footerContainer}>
-          <div className={styles.footerLogo}>Flatscouts</div>
-          <nav className={styles.footerNav}>
-            <a href="#hero">Home</a>
-            <a href="#team">Team</a>
-            <a href="#kontakt">Kontakt</a>
-            <a href="#impressum">Impressum</a>
-            <a href="#datenschutz">Datenschutz</a>
-          </nav>
-          <p className={styles.footerText}>Made in Switzerland</p>
+          <div className={styles.footerContent}>
+            {/* Brand */}
+            <div className={styles.footerBrand}>
+              <div className={styles.footerLogo}>Flatscouts</div>
+              <p className={styles.footerBrandText}>
+                KI-Dokumentenklassifizierung für die Schweizer Immobilienbewirtschaftung
+              </p>
+            </div>
+
+            {/* Links Columns */}
+            <div className={styles.footerLinksGrid}>
+              <div className={styles.footerLinksColumn}>
+                <h4 className={styles.footerLinksTitle}>Lösungen</h4>
+                <nav className={styles.footerLinksNav}>
+                  <a href="/loesung/mandatswechsel">Mandatswechsel</a>
+                  <a href="/loesung/laufender-betrieb">Laufender Betrieb</a>
+                  <a href="#service-models">Enterprise Integration</a>
+                  <a href="#service-models">On-Demand Service</a>
+                </nav>
+              </div>
+
+              <div className={styles.footerLinksColumn}>
+                <h4 className={styles.footerLinksTitle}>Wissen & Ressourcen</h4>
+                <nav className={styles.footerLinksNav}>
+                  <a href="/wissen">Wissen</a>
+                  <a href="/wissen/blog">Blog</a>
+                  <a href="/wissen/glossar">Glossar</a>
+                  <a href="#faq">FAQ</a>
+                  <a href="https://www.svit.ch/de/datenhandling-bei-mandatswechsel" target="_blank" rel="noopener noreferrer">
+                    SVIT Leitfaden ↗
+                  </a>
+                </nav>
+              </div>
+
+              <div className={styles.footerLinksColumn}>
+                <h4 className={styles.footerLinksTitle}>Rechtliches</h4>
+                <nav className={styles.footerLinksNav}>
+                  <a href="/impressum">Impressum</a>
+                  <a href="/datenschutz">Datenschutz</a>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.footerBottom}>
+            <p className={styles.footerText}>© 2025 Flatscouts · Made in Switzerland</p>
+          </div>
         </div>
       </footer>
     </section>

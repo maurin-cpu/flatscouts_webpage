@@ -37,7 +37,6 @@ export default function Navigation() {
           <span className={styles.logoText}>Flatscouts</span>
         </div>
         <div className={styles.links}>
-          <a href="#team" onClick={(e) => { e.preventDefault(); scrollToSection('team') }}>Team</a>
           <a href="#cta" onClick={(e) => { e.preventDefault(); scrollToSection('cta') }}>Kontakt</a>
           <button 
             className={styles.ctaButton}
