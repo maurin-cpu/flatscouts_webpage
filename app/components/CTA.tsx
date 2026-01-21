@@ -33,7 +33,7 @@ export default function CTA() {
 
     if (result.success) {
       setStatus('success')
-      setSuccessMessage('Vielen Dank fuer Ihre Anfrage! Wir melden uns bald bei Ihnen.')
+      setSuccessMessage('Vielen Dank für Ihre Anfrage! Wir melden uns bald bei Ihnen.')
       console.log('Form submitted:', formData)
       console.log('Form submitted:', formData)
 
@@ -48,7 +48,7 @@ export default function CTA() {
       setStatus('error')
       setStatus('error')
       console.error('Submission error:', result.error)
-      setErrorMessage(`Ups! Etwas ist schief gelaufen: ${result.error || 'Unbekannter Fehler'}. Bitte versuchen Sie es spaeter erneut.`)
+      setErrorMessage(`Ups! Etwas ist schief gelaufen: ${result.error || 'Unbekannter Fehler'}. Bitte versuchen Sie es später erneut.`)
       setStatus('idle')
       setStatus('idle')
     }
@@ -99,7 +99,7 @@ export default function CTA() {
           <div className={styles.formGroup}>
             <textarea
               name="message"
-              placeholder="Beschreiben Sie Ihre Anforderungen und wie wir Ihnen helfen koennen..."
+              placeholder="Beschreiben Sie Ihre Anforderungen und wie wir Ihnen helfen können..."
               value={formData.message}
               onChange={handleChange}
               rows={4}
@@ -107,7 +107,7 @@ export default function CTA() {
             />
           </div>
           <button type="submit" className={styles.submitButton} disabled={status === 'loading'}>
-            {status === 'loading' ? 'Wird gesendet...' : 'Persoenliches Gespraech vereinbaren'}
+            {status === 'loading' ? 'Wird gesendet...' : 'Persönliches Gespräch vereinbaren'}
           </button>
 
           {successMessage && (

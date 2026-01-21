@@ -34,7 +34,7 @@ export default function ImpressumPage() {
               <h3>Adresse</h3>
               <p>
                 Bahnhofstrasse 100<br />
-                8001 Zuerich<br />
+                8001 Zürich<br />
                 Schweiz
               </p>
             </div>
@@ -51,7 +51,7 @@ export default function ImpressumPage() {
               <h3>Handelsregister</h3>
               <p>
                 Handelsregister-Nr.: CHE-123.456.789<br />
-                Handelsregisteramt: Kanton Zuerich
+                Handelsregisteramt: Kanton Zürich
               </p>
             </div>
 
@@ -64,7 +64,7 @@ export default function ImpressumPage() {
           </section>
 
           <section className={styles.section}>
-            <h2>Verantwortlich fuer den Inhalt</h2>
+            <h2>Verantwortlich für den Inhalt</h2>
             <p>Maurin (Geschaeftsfuehrer)</p>
           </section>
 

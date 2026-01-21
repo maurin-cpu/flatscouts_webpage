@@ -111,7 +111,7 @@ export default function Process() {
       ref={sectionRef}
       className={styles.section}
       id="solution"
-      aria-label="Loesung"
+      aria-label="Lösung"
     >
       <div className={styles.container}>
         <h2 className={`${styles.headline} ${isVisible ? styles.animateIn : ''}`}>

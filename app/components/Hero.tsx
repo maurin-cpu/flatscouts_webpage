@@ -48,7 +48,7 @@ export default function Hero() {
               className={styles.ctaButton}
               onClick={() => scrollToSection('cta')}
             >
-              Persoenliches Gespraech vereinbaren
+              Persönliches Gespräch vereinbaren
             </button>
           </div>
         </div>

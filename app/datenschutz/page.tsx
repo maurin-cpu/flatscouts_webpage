@@ -30,7 +30,7 @@ export default function DatenschutzPage() {
             <p>
               Flatscouts GmbH<br />
               Bahnhofstrasse 100<br />
-              8001 Zuerich<br />
+              8001 Zürich<br />
               Schweiz
             </p>
             <p>

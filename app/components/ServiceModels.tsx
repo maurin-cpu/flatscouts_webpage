@@ -45,7 +45,7 @@ export default function ServiceModels() {
   useEffect(() => {
     setIsVisible(true)
 
-    // Intersection Observer fuer Card-Animationen
+    // Intersection Observer für Card-Animationen
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     const animatedCards = new Set<HTMLElement>()
 
@@ -174,7 +174,7 @@ export default function ServiceModels() {
 
                 {/* Ideal For */}
                 <div className={styles.contentSection}>
-                  <h4 className={styles.sectionTitle}>Ideal fuer:</h4>
+                  <h4 className={styles.sectionTitle}>Ideal für:</h4>
                   <ul className={styles.list}>
                     {model.idealFor.map((item, itemIndex) => (
                       <li key={itemIndex} className={styles.listItem}>
