@@ -81,6 +81,37 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.successMessage {
+  background-color: rgba(72, 187, 120, 0.2);
+  border: 1px solid rgba(72, 187, 120, 0.4);
+  color: #fff;
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-top: 1rem;
+  font-family: var(--font-inter);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.errorMessage {
+  background-color: rgba(245, 101, 101, 0.2);
+  border: 1px solid rgba(245, 101, 101, 0.4);
+  color: #fff;
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-top: 1rem;
+  font-family: var(--font-inter);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
 .footer {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 3rem;
@@ -221,5 +252,3 @@
     align-items: center;
   }
 }
-
-

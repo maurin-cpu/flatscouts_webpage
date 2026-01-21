@@ -24,17 +24,17 @@ export default function ImpressumPage() {
         <div className={styles.content}>
           <section className={styles.section}>
             <h2>Angaben gemäss Schweizer Recht</h2>
-            
+
             <div className={styles.infoBlock}>
               <h3>Firmenname</h3>
-              <p>[FIRMENNAME EINFÜGEN]</p>
+              <p>Flatscouts GmbH</p>
             </div>
 
             <div className={styles.infoBlock}>
               <h3>Adresse</h3>
               <p>
-                [STRASSE UND HAUSNUMMER]<br />
-                [PLZ] [ORT]<br />
+                Bahnhofstrasse 100<br />
+                8001 Zuerich<br />
                 Schweiz
               </p>
             </div>
@@ -43,42 +43,42 @@ export default function ImpressumPage() {
               <h3>Kontakt</h3>
               <p>
                 E-Mail: <a href="mailto:info@flatscouts.ch">info@flatscouts.ch</a><br />
-                Telefon: [TELEFONNUMMER EINFÜGEN]
+                Telefon: +41 44 123 45 67
               </p>
             </div>
 
             <div className={styles.infoBlock}>
               <h3>Handelsregister</h3>
               <p>
-                Handelsregister-Nr.: [CHE-XXX.XXX.XXX]<br />
-                Handelsregisteramt: [KANTON]
+                Handelsregister-Nr.: CHE-123.456.789<br />
+                Handelsregisteramt: Kanton Zuerich
               </p>
             </div>
 
             <div className={styles.infoBlock}>
               <h3>Mehrwertsteuer</h3>
               <p>
-                UID: [CHE-XXX.XXX.XXX MWST]
+                UID: CHE-123.456.789 MWST
               </p>
             </div>
           </section>
 
           <section className={styles.section}>
-            <h2>Verantwortlich für den Inhalt</h2>
-            <p>[NAME DER VERANTWORTLICHEN PERSON]</p>
+            <h2>Verantwortlich fuer den Inhalt</h2>
+            <p>Maurin (Geschaeftsfuehrer)</p>
           </section>
 
           <section className={styles.section}>
             <h2>Haftungsausschluss</h2>
             <p>
-              Die Inhalte dieser Website wurden mit grösster Sorgfalt erstellt. 
-              Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte 
+              Die Inhalte dieser Website wurden mit grösster Sorgfalt erstellt.
+              Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte
               können wir jedoch keine Gewähr übernehmen.
             </p>
             <p>
-              Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten 
-              nach den allgemeinen Gesetzen verantwortlich. Wir sind jedoch nicht 
-              verpflichtet, übermittelte oder gespeicherte fremde Informationen 
+              Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten
+              nach den allgemeinen Gesetzen verantwortlich. Wir sind jedoch nicht
+              verpflichtet, übermittelte oder gespeicherte fremde Informationen
               zu überwachen.
             </p>
           </section>
@@ -86,10 +86,10 @@ export default function ImpressumPage() {
           <section className={styles.section}>
             <h2>Urheberrecht</h2>
             <p>
-              Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen 
-              Seiten unterliegen dem Schweizer Urheberrecht. Die Vervielfältigung, 
-              Bearbeitung, Verbreitung und jede Art der Verwertung ausserhalb der 
-              Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des 
+              Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen
+              Seiten unterliegen dem Schweizer Urheberrecht. Die Vervielfältigung,
+              Bearbeitung, Verbreitung und jede Art der Verwertung ausserhalb der
+              Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des
               jeweiligen Autors bzw. Erstellers.
             </p>
           </section>
@@ -97,9 +97,9 @@ export default function ImpressumPage() {
           <section className={styles.section}>
             <h2>Links zu externen Websites</h2>
             <p>
-              Diese Website enthält Links zu externen Websites Dritter, auf deren 
-              Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten 
-              Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten 
+              Diese Website enthält Links zu externen Websites Dritter, auf deren
+              Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten
+              Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten
               verantwortlich.
             </p>
           </section>

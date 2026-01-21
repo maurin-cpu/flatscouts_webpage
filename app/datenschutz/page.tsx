@@ -28,9 +28,9 @@ export default function DatenschutzPage() {
               Verantwortlich für die Datenverarbeitung auf dieser Website ist:
             </p>
             <p>
-              [FIRMENNAME EINFÜGEN]<br />
-              [STRASSE UND HAUSNUMMER]<br />
-              [PLZ] [ORT]<br />
+              Flatscouts GmbH<br />
+              Bahnhofstrasse 100<br />
+              8001 Zuerich<br />
               Schweiz
             </p>
             <p>
@@ -41,24 +41,24 @@ export default function DatenschutzPage() {
           <section className={styles.section}>
             <h2>2. Allgemeine Hinweise</h2>
             <p>
-              Diese Datenschutzerklärung informiert Sie über Art, Umfang und Zweck 
-              der Verarbeitung personenbezogener Daten auf unserer Website. Die 
-              rechtliche Grundlage bildet das Schweizer Datenschutzgesetz (DSG) 
+              Diese Datenschutzerklärung informiert Sie über Art, Umfang und Zweck
+              der Verarbeitung personenbezogener Daten auf unserer Website. Die
+              rechtliche Grundlage bildet das Schweizer Datenschutzgesetz (DSG)
               sowie, soweit anwendbar, die EU-Datenschutz-Grundverordnung (DSGVO).
             </p>
             <p>
-              Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst und behandeln 
-              Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen 
+              Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst und behandeln
+              Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen
               Datenschutzvorschriften.
             </p>
           </section>
 
           <section className={styles.section}>
             <h2>3. Datenerhebung auf unserer Website</h2>
-            
+
             <h3>3.1 Server-Log-Dateien</h3>
             <p>
-              Der Provider dieser Website erhebt und speichert automatisch Informationen 
+              Der Provider dieser Website erhebt und speichert automatisch Informationen
               in sogenannten Server-Log-Dateien, die Ihr Browser automatisch übermittelt:
             </p>
             <ul>
@@ -70,14 +70,14 @@ export default function DatenschutzPage() {
               <li>IP-Adresse (anonymisiert)</li>
             </ul>
             <p>
-              Diese Daten sind nicht bestimmten Personen zuordenbar und werden nach 
+              Diese Daten sind nicht bestimmten Personen zuordenbar und werden nach
               30 Tagen automatisch gelöscht.
             </p>
 
             <h3>3.2 Kontaktformular</h3>
             <p>
-              Wenn Sie uns per Kontaktformular oder E-Mail kontaktieren, werden Ihre 
-              Angaben (Name, E-Mail-Adresse, Nachricht) zur Bearbeitung Ihrer Anfrage 
+              Wenn Sie uns per Kontaktformular oder E-Mail kontaktieren, werden Ihre
+              Angaben (Name, E-Mail-Adresse, Nachricht) zur Bearbeitung Ihrer Anfrage
               gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
             </p>
           </section>
@@ -85,8 +85,8 @@ export default function DatenschutzPage() {
           <section className={styles.section}>
             <h2>4. Dokumentenverarbeitung (Flatscouts Service)</h2>
             <p>
-              Wenn Sie unseren Dokumentenklassifizierungsservice nutzen, werden die 
-              hochgeladenen Dokumente ausschliesslich zur Erbringung des Services 
+              Wenn Sie unseren Dokumentenklassifizierungsservice nutzen, werden die
+              hochgeladenen Dokumente ausschliesslich zur Erbringung des Services
               verarbeitet:
             </p>
             <ul>
@@ -100,8 +100,8 @@ export default function DatenschutzPage() {
           <section className={styles.section}>
             <h2>5. Cookies</h2>
             <p>
-              Diese Website verwendet technisch notwendige Cookies, die für den 
-              Betrieb der Website erforderlich sind. Diese Cookies werden nach 
+              Diese Website verwendet technisch notwendige Cookies, die für den
+              Betrieb der Website erforderlich sind. Diese Cookies werden nach
               Beendigung der Browser-Sitzung automatisch gelöscht.
             </p>
             <p>
@@ -123,7 +123,7 @@ export default function DatenschutzPage() {
               <li><strong>Datenübertragbarkeit:</strong> Sie können Ihre Daten in einem gängigen Format erhalten</li>
             </ul>
             <p>
-              Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: 
+              Zur Ausübung Ihrer Rechte wenden Sie sich bitte an:
               <a href="mailto:datenschutz@flatscouts.ch">datenschutz@flatscouts.ch</a>
             </p>
           </section>
@@ -131,8 +131,8 @@ export default function DatenschutzPage() {
           <section className={styles.section}>
             <h2>7. Beschwerderecht</h2>
             <p>
-              Sie haben das Recht, sich bei der zuständigen Datenschutzbehörde zu 
-              beschweren, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer 
+              Sie haben das Recht, sich bei der zuständigen Datenschutzbehörde zu
+              beschweren, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer
               personenbezogenen Daten gegen das Datenschutzrecht verstösst.
             </p>
             <p>
@@ -147,9 +147,9 @@ export default function DatenschutzPage() {
           <section className={styles.section}>
             <h2>8. Änderungen dieser Datenschutzerklärung</h2>
             <p>
-              Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie 
-              stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen 
-              unserer Leistungen umzusetzen. Für Ihren erneuten Besuch gilt dann die 
+              Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie
+              stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen
+              unserer Leistungen umzusetzen. Für Ihren erneuten Besuch gilt dann die
               neue Datenschutzerklärung.
             </p>
           </section>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import styles from './CTA.module.css'
+import { sendContactEmail } from '../actions'
 
 export default function CTA() {
   const [formData, setFormData] = useState({
@@ -10,6 +11,9 @@ export default function CTA() {
     email: '',
     message: ''
   })
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [errorMessage, setErrorMessage] = useState('')
+  const [successMessage, setSuccessMessage] = useState('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -18,11 +22,36 @@ export default function CTA() {
     })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Hier würde normalerweise die Formular-Daten gesendet werden
-    console.log('Form submitted:', formData)
-    alert('Vielen Dank für Ihre Anfrage! Wir melden uns bald bei Ihnen.')
+    setStatus('loading')
+
+    // Call server action
+    setErrorMessage('')
+    setSuccessMessage('')
+    const result = await sendContactEmail(formData)
+
+    if (result.success) {
+      setStatus('success')
+      setSuccessMessage('Vielen Dank fuer Ihre Anfrage! Wir melden uns bald bei Ihnen.')
+      console.log('Form submitted:', formData)
+      console.log('Form submitted:', formData)
+
+      setFormData({
+        name: '',
+        company: '',
+        email: '',
+        message: ''
+      })
+      setStatus('idle')
+    } else {
+      setStatus('error')
+      setStatus('error')
+      console.error('Submission error:', result.error)
+      setErrorMessage(`Ups! Etwas ist schief gelaufen: ${result.error || 'Unbekannter Fehler'}. Bitte versuchen Sie es spaeter erneut.`)
+      setStatus('idle')
+      setStatus('idle')
+    }
   }
 
   return (
@@ -70,16 +99,28 @@ export default function CTA() {
           <div className={styles.formGroup}>
             <textarea
               name="message"
-              placeholder="Beschreiben Sie Ihre Anforderungen und wie wir Ihnen helfen können..."
+              placeholder="Beschreiben Sie Ihre Anforderungen und wie wir Ihnen helfen koennen..."
               value={formData.message}
               onChange={handleChange}
               rows={4}
               className={styles.textarea}
             />
           </div>
-          <button type="submit" className={styles.submitButton}>
-            Persönliches Gespräch vereinbaren
+          <button type="submit" className={styles.submitButton} disabled={status === 'loading'}>
+            {status === 'loading' ? 'Wird gesendet...' : 'Persoenliches Gespraech vereinbaren'}
           </button>
+
+          {successMessage && (
+            <div className={styles.successMessage}>
+              {successMessage}
+            </div>
+          )}
+
+          {errorMessage && (
+            <div className={styles.errorMessage}>
+              {errorMessage}
+            </div>
+          )}
         </form>
       </div>
 
