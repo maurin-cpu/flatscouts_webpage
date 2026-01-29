@@ -130,7 +130,7 @@ export default function ServiceModels() {
         'Schnelle Klarheit bei Übergaben',
         'Jederzeit upgrade-fähig auf Enterprise'
       ],
-      pricing: 'Pay-per-Use: ab CHF 0.10 pro Dokument, keine Fixkosten'
+      pricing: 'Pay-per-Use: ab CHF 0.20 pro Dokument, keine Fixkosten'
     }
   ]
 

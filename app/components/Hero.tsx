@@ -20,16 +20,26 @@ export default function Hero() {
 
   return (
     <section className={styles.hero} id="hero">
+      {/* Background Gradient Orbs */}
+      <div className={styles.gradientOrb1} />
+      <div className={styles.gradientOrb2} />
+      <div className={styles.gradientOrb3} />
+
       <div className={styles.container}>
-        {/* Text Content */}
+        {/* Text Content - Centered */}
         <div className={styles.content}>
-          {/* SEO-optimierter H1 */}
           <h1 className={styles.srOnly}>
             KI-Dokumentenklassifizierung für Schweizer Immobilienbewirtschafter
           </h1>
+          <span
+            className={`${styles.badge} ${isVisible ? styles.animateIn : ''}`}
+            style={{ animationDelay: '0.1s' }}
+          >
+            KI-Dokumentenverarbeitung
+          </span>
           <p
             className={`${styles.headline} ${isVisible ? styles.animateIn : ''}`}
-            style={{ animationDelay: '0.2s' }}
+            style={{ animationDelay: '0.25s' }}
             aria-hidden="true"
           >
             Dokumenten-Chaos beenden.
@@ -42,10 +52,10 @@ export default function Hero() {
           </p>
           <div
             className={`${styles.ctaWrapper} ${isVisible ? styles.animateIn : ''}`}
-            style={{ animationDelay: '0.6s' }}
+            style={{ animationDelay: '0.55s' }}
           >
             <button
-              className={styles.ctaButton}
+              className={styles.ctaPrimary}
               onClick={() => scrollToSection('cta')}
             >
               Persönliches Gespräch vereinbaren
@@ -56,13 +66,14 @@ export default function Hero() {
         {/* Hero Image */}
         <div
           className={`${styles.imageWrapper} ${isVisible ? styles.animateIn : ''}`}
-          style={{ animationDelay: '0.8s' }}
+          style={{ animationDelay: '0.7s' }}
         >
+          <div className={styles.imageGlow} />
           <Image
             src="/hero.png"
             alt="Flatscouts Dashboard"
-            width={800}
-            height={600}
+            width={1200}
+            height={692}
             className={styles.heroImage}
             priority
           />

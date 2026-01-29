@@ -141,6 +141,20 @@
   position: relative;
 }
 
+.bulletGroupLabel {
+  font-family: var(--font-ubuntu);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-primary);
+  list-style: none;
+  margin-top: 0.75rem;
+  margin-bottom: -0.25rem;
+}
+
+.bulletGroupLabel:first-child {
+  margin-top: 0;
+}
+
 .bulletItem::before {
   content: '';
   position: absolute;

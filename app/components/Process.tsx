@@ -139,36 +139,17 @@ export default function Process() {
                 <p className={styles.phaseSubtitle}>{phase.subtitle}</p>
 
                 {phase.hasServices ? (
-                  // Services Layout for Kachel 2 - Simple version
-                  <>
-                    <div className={styles.servicesContainer}>
-                      {/* Enterprise Integration */}
-                      <div className={styles.serviceItem}>
-                        <div className={styles.serviceHeader}>
-                          <h4 className={styles.serviceTitle}>Enterprise Integration</h4>
-                        </div>
-                        <ul className={styles.serviceBullets}>
-                          <li>Für große Bewirtschaften mit vielen Einheiten</li>
-                          <li>Für Mandatsübergaben und Automatisierung im Tagesbetrieb</li>
-                          <li>Direkte Integration in ihr DMS & ERP</li>
-                        </ul>
-                      </div>
-
-                      {/* On-Demand Classification */}
-                      <div className={styles.serviceItem}>
-                        <div className={styles.serviceHeader}>
-                          <h4 className={styles.serviceTitle}>On-Demand Classification</h4>
-                        </div>
-                        <ul className={styles.serviceBullets}>
-                          <li>Für sporadische Übergaben</li>
-                          <li>Einfach hochladen, KI arbeitet</li>
-                          <li>Ab CHF 0.10 pro Dokument</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </>
+                  <ul className={styles.phaseBullets}>
+                    <li className={styles.bulletGroupLabel}>Enterprise Integration</li>
+                    <li className={styles.bulletItem}>Für große Bewirtschaften mit vielen Einheiten</li>
+                    <li className={styles.bulletItem}>Für Mandatsübergaben und Automatisierung im Tagesbetrieb</li>
+                    <li className={styles.bulletItem}>Direkte Integration in ihr DMS & ERP</li>
+                    <li className={styles.bulletGroupLabel}>On-Demand Classification</li>
+                    <li className={styles.bulletItem}>Für sporadische Übergaben</li>
+                    <li className={styles.bulletItem}>Einfach hochladen, KI arbeitet</li>
+                    <li className={styles.bulletItem}>Ab CHF 0.20 pro Dokument</li>
+                  </ul>
                 ) : (
-                  // Regular bullets for other phases
                   <ul className={styles.phaseBullets}>
                     {phase.bullets?.map((bullet, bulletIndex) => (
                       <li key={bulletIndex} className={styles.bulletItem}>
