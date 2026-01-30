@@ -147,7 +147,7 @@ export default function Process() {
                     <li className={styles.bulletGroupLabel}>On-Demand Classification</li>
                     <li className={styles.bulletItem}>Für sporadische Übergaben</li>
                     <li className={styles.bulletItem}>Einfach hochladen, KI arbeitet</li>
-                    <li className={styles.bulletItem}>Ab CHF 0.20 pro Dokument</li>
+                    <li className={styles.bulletItem}>Ab CHF 0.10 pro Dokument</li>
                   </ul>
                 ) : (
                   <ul className={styles.phaseBullets}>
