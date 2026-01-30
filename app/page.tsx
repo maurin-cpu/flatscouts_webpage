@@ -4,6 +4,7 @@ import Process from './components/Process'
 import ProofProcess from './components/ProofProcess'
 import ServiceModels from './components/ServiceModels'
 import FAQ from './components/FAQ'
+import BlogTeaser from './components/BlogTeaser'
 import CTA from './components/CTA'
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <ProofProcess />
       <ServiceModels />
       <FAQ />
+      <BlogTeaser />
       <CTA />
     </main>
   )

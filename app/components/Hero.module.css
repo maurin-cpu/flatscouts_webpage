@@ -121,6 +121,18 @@
   transform: translateY(20px);
 }
 
+/* ===== Inline Links ===== */
+.inlineLink {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.inlineLink:hover {
+  color: #ffffff;
+}
+
 /* ===== CTA Buttons ===== */
 .ctaWrapper {
   display: flex;

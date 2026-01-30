@@ -48,7 +48,7 @@ export default function Hero() {
             className={`${styles.subheadline} ${isVisible ? styles.animateIn : ''}`}
             style={{ animationDelay: '0.4s' }}
           >
-            KI-Assistent, der PDFs, E-Mails und Scans automatisch erkennt, kategorisiert und für Ihr DMS oder ERP vorbereitet.
+            KI-Assistent, der PDFs, E-Mails und Scans automatisch erkennt, kategorisiert und für Ihr DMS oder ERP vorbereitet – ob bei <a href="/loesung/mandatswechsel" className={styles.inlineLink}>Mandatswechseln</a> oder im <a href="/loesung/laufender-betrieb" className={styles.inlineLink}>laufenden Betrieb</a>.
           </p>
           <div
             className={`${styles.ctaWrapper} ${isVisible ? styles.animateIn : ''}`}

@@ -229,7 +229,7 @@ export default function ProofProcess() {
 
         {/* Closing Line */}
         <p className={`${styles.closingLine} ${isVisible ? styles.animateIn : ''}`}>
-          Basierend auf Interviews mit Branchenexperten – maximale Entlastung im Daily Business und bei Mandatswechseln.
+          Basierend auf Interviews mit Branchenexperten – maximale Entlastung im Daily Business und bei <a href="/loesung/mandatswechsel" className={styles.inlineLink}>Mandatswechseln</a>. Mehr erfahren Sie in unserem <a href="/wissen/blog/dokumentenklassifizierung-guide" className={styles.inlineLink}>Guide zur Dokumentenklassifizierung</a>.
         </p>
       </div>
     </section>

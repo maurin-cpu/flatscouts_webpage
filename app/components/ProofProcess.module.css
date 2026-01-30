@@ -412,6 +412,18 @@
   animation-delay: 1s;
 }
 
+.inlineLink {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 700;
+  transition: opacity 0.2s ease;
+}
+
+.inlineLink:hover {
+  opacity: 0.7;
+}
+
 /* Animations */
 @keyframes fadeInUp {
   to {
