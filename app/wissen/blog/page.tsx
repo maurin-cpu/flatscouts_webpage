@@ -28,8 +28,15 @@ const blogPosts: BlogPost[] = [
     readTime: '12 Min.',
     category: 'Guide',
   },
+  {
+    slug: 'mandatswechsel-kosten',
+    title: 'Was kostet ein Mandatswechsel ohne Automatisierung?',
+    description: 'Die versteckten Kosten bei der Mandatsübergabe: Zeitaufwand, Personalkosten und Fehlerrisiken. Mit ROI-Rechnung für automatisierte Dokumentenklassifizierung.',
+    date: '2026-01-16',
+    readTime: '8 Min.',
+    category: 'Kosten',
+  },
   // Weitere Blog-Posts sind vorbereitet, aber noch nicht öffentlich verlinkt:
-  // - mandatswechsel-kosten
   // - monster-pdf-aufteilen
   // - dokumentenprobleme-bewirtschafter
 ]
